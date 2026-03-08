@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: raw
+    database: FOOTBALL_DB
+    schema: RAW
+    tables:
+      - name: STANDINGS
+      - name: TOP_SCORERS
+      - name: FIXTURES
