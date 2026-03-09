@@ -1,0 +1,44 @@
+version: 2
+
+models:
+  - name: stg_top_scorers
+    columns:
+      - name: player_id
+        tests:
+          - not_null
+          - unique
+      - name: player_name
+        tests:
+          - not_null
+      - name: team_name
+        tests:
+          - not_null
+      - name: goals
+        tests:
+          - not_null
+
+  - name: stg_standings
+    columns:
+      - name: rank
+        tests:
+          - not_null
+          - unique
+      - name: team_name
+        tests:
+          - not_null
+      - name: points
+        tests:
+          - not_null
+
+  - name: stg_fixtures
+    columns:
+      - name: fixture_id
+        tests:
+          - not_null
+          - unique
+      - name: home_team
+        tests:
+          - not_null
+      - name: away_team
+        tests:
+          - not_null
